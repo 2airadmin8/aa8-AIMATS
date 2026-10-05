@@ -1,0 +1,367 @@
+@media screen and (min-width: 1200px) and (max-width: 1650px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1079px) {
+}
+
+@media (max-width: 768px) {
+  .rightbox {
+    position: static;
+    width: 100%;
+    padding: 20px;
+  }
+  .lp .head {
+    display: none;
+  }
+  .lp {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 68px;
+  }
+  .lp_header .header_sticky {
+    display: block;
+  }
+
+  .lp .banner {
+    padding: 40px 15px;
+    height: auto;
+  }
+  .lp .banner dd {
+    font-size: 18px;
+    line-height: 50px;
+  }
+  .lp .banner dt span {
+    font-size: 14px;
+    width: 184px;
+    height: 43px;
+    line-height: 36px;
+  }
+  .lp .banner .m {
+    width: 80%;
+    margin: 20px auto 0;
+    display: block;
+  }
+  .lp .banner .ft {
+    font-size: 30px;
+    text-align: left;
+    margin-top: 15px;
+    line-height: 40px;
+  }
+  .lp .banner .ft::before {
+    display: none;
+  }
+  .lp .banner .ft div {
+    position: relative;
+    display: inline-block;
+  }
+  .lp .banner .ft div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 10px solid rgba(255, 217, 88, 0.7);
+  }
+  .lp .banner .flex {
+    text-align: center;
+  }
+  .lp .commonpart {
+    font-size: 18px;
+    padding: 0 10px 0 0;
+    line-height: 68px;
+  }
+  .lp .commonpart .left {
+    width: 100px;
+    margin-top: -40px;
+    margin-right: -30px;
+  }
+  .lp .commonpart .right {
+    width: 50px;
+  }
+  .lp .title_common span,
+  .lp .g h3 span {
+    font-size: 17px;
+    line-height: 34px;
+  }
+  .lp .title_common span b {
+    display: block;
+  }
+  .lp .b .two .title_common,
+  .lp .a .title_common {
+    height: 94px;
+    background-size: auto 100%;
+  }
+  .lp .a .bd .flex {
+    display: block;
+  }
+  .lp .a .bd .pic {
+    width: 100%;
+    margin: 0;
+  }
+  .lp .a .bd p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .lp .a {
+    padding: 30px 0;
+  }
+  .lp .a .bd {
+    margin-top: 20px;
+  }
+  .lp .b .one .bd ul {
+    margin: 0;
+  }
+  .lp .b .one .bd ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .lp .b .one {
+    background: url(../images/img21.png) top center no-repeat;
+    background-size: 100% 100%;
+    padding: 30px 30px 80px;
+  }
+  .lp .title_common span::before,
+  .lp .title_common span::after {
+    width: 25px;
+  }
+  .lp .title_common span::before {
+    left: -30px;
+  }
+  .lp .title_common span::after {
+    right: -30px;
+  }
+  .lp .b .one .bd {
+    margin-top: 30px;
+  }
+  .lp .b .one .bd ul li p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .lp .b .two .hd {
+    font-size: 26px;
+    line-height: 35px;
+    margin-top: -30px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+  .lp .b .two .hd p {
+    font-size: 17px;
+  }
+  .lp .b .two .title_common span {
+    max-width: 70%;
+  }
+  .lp .b .two .title_common1 span {
+    max-width: 100%;
+  }
+  .lp .b .two .title_common1 span::before,
+  .lp .b .two .title_common1 span::after {
+    display: none;
+  }
+  .lp .b .two .bd p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .lp .b .two .bd video {
+    margin-top: 20px;
+  }
+  .lp .b {
+    padding-bottom: 40px;
+  }
+  .lp .c .title_common span::before,
+  .lp .c .title_common span::after,
+  .lp .d .title_common span::before,
+  .lp .d .title_common span::after,
+  .lp .e .title_common span::before,
+  .lp .e .title_common span::after,
+  .lp .g .title_common span::before,
+  .lp .g .title_common span::after {
+    display: none;
+  }
+  .lp .c {
+    padding: 40px 0;
+  }
+  .lp .c .bd .flex {
+    display: block;
+    padding: 20px 0;
+  }
+  .lp .c .bd .flex .pic {
+    margin: 0;
+    width: 100%;
+  }
+  .lp .c .bd dt {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .lp .c .bd dt span {
+    font-size: 50px;
+  }
+  .lp .c .bd dd {
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 10px;
+  }
+  .lp .container {
+    max-width: 100%;
+  }
+  .lp .d .bd {
+    margin-top: 10px;
+  }
+  .lp .d .bd ul {
+    margin: -5px;
+  }
+  .lp .d .bd ul li {
+    width: 50%;
+    padding: 5px;
+  }
+  .lp .d .bd ul li .box {
+    padding: 2px;
+  }
+  .lp .d .bd ul li dl {
+    padding: 15px 10px 0;
+    height: 280px;
+  }
+  .lp .d .bd ul li img {
+    width: 90px;
+  }
+  .lp .d .bd ul li dt span {
+    font-size: 17px;
+  }
+  .lp .d .bd ul li dd {
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+  .lp .d,
+  .lp .f {
+    padding: 40px 0;
+  }
+  .lp .d .ft {
+    margin-top: 20px;
+  }
+  .lp .d .ft i {
+    width: 46px;
+    height: 45px;
+  }
+  .lp .e h4 {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+  .lp .e {
+    padding: 40px 15px;
+  }
+  .lp .e .bd {
+    margin-top: 20px;
+  }
+  .lp .e .swiper-slide {
+    width: 90%;
+  }
+  .lp .e .box dl {
+    padding: 40px 0;
+  }
+  .lp .e .box dl dt {
+    font-size: 14px;
+  }
+  .lp .e .box dl dt span {
+    font-size: 40px;
+  }
+  .lp .e .bd li + li {
+    margin-top: 15px;
+  }
+  .lp .e .box h3 {
+    line-height: 50px;
+  }
+  .lp .e .box {
+    height: auto;
+  }
+  .lp .f .bd {
+    display: block;
+    margin-top: 20px;
+  }
+  .lp .f .bd dl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lp .f .bd dl img {
+    width: 52px;
+    margin: 0 10px;
+  }
+  .lp .f .bd dt {
+    font-size: 40px;
+  }
+  .lp .f .bd dd {
+    width: 130px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .lp .f .bd dd br {
+    display: none;
+  }
+  .lp .f .bd i {
+    margin: 20px auto;
+    transform: rotate(90deg);
+  }
+  .lp .g {
+    padding: 40px 0 20px;
+  }
+  .lp .g h3 {
+    padding: 20px 0;
+  }
+  .lp .g dt {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .lp .g dt span {
+    font-size: 17px;
+  }
+  .lp .g dd {
+    font-size: 14px;
+    line-height: 28px;
+    padding: 10px 0 20px 40px;
+  }
+  .lp .foot .flex {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+  }
+  .lp .foot ul li {
+    padding: 0;
+  }
+  .lp .foot ul {
+    justify-content: space-between;
+    border-bottom: 1px solid #f4f8fa;
+  }
+  .lp .commonpart {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+  }
+  .result .hd span {
+    font-size: 25px;
+  }
+  .result .hd img {
+    width: 137px;
+  }
+  .result .hd {
+    justify-content: left;
+    height: 120px;
+  }
+  .result .bd {
+    margin-top: 20px;
+    padding: 45px 15px 68px;
+  }
+  .result .bd p {
+    text-align: left;
+    margin-top: 25px;
+  }
+  .result .bd h3 {
+    width: 290px;
+    margin: 0 auto;
+  }
+}
