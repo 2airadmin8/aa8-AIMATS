@@ -1,0 +1,109 @@
+name: Deploy AIMATS staging to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  AIMATS_PUBLIC: "0"
+
+concurrency:
+  group: aimats-pages-staging
+  cancel-in-progress: true
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact release revision
+        uses: actions/checkout@v6
+
+      - name: Setup PHP 7.4
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          coverage: none
+          ini-file: production
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build static AIMATS release
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build_site.py scripts/verify_release.py
+          php -l scripts/preview-router.php
+          python scripts/build_site.py
+
+      - name: Verify SEO / LLMO / release contract
+        run: |
+          set -euo pipefail
+          python scripts/verify_release.py
+          grep -q 'noindex,nofollow,noarchive' _site/index.html
+          grep -q 'Disallow: /' _site/robots.txt
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build-and-verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
+          error_count: 20
+          reporting_interval: 5000
+
+      - name: Verify staging release SHA
+        shell: bash
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+          BASE_URL: https://2airadmin8.github.io/aa8-AIMATS
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp)"
+          trap 'rm -f "$tmp"' EXIT
+          for attempt in $(seq 1 36); do
+            if curl -fsSL -H 'Cache-Control: no-cache'               "$BASE_URL/deploy-meta.json?v=${GITHUB_RUN_ID}-${attempt}" -o "$tmp"; then
+              if python - "$tmp" "$EXPECTED_SHA" <<'PY'
+          import json, sys
+          from pathlib import Path
+          data=json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          if data.get("site_sha","").lower()!=sys.argv[2].lower():
+              raise SystemExit(1)
+          if data.get("mode")!="staging-noindex":
+              raise SystemExit(1)
+          PY
+              then
+                curl -fsSL "$BASE_URL/" >/dev/null
+                curl -fsSL "$BASE_URL/feature/" >/dev/null
+                curl -fsSL "$BASE_URL/faq/" >/dev/null
+                echo "AIMATS GitHub Pages staging verified: $EXPECTED_SHA"
+                exit 0
+              fi
+            fi
+            sleep 5
+          done
+          echo "Staging verification timed out."
+          exit 1
