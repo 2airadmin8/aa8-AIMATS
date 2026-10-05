@@ -46,7 +46,7 @@ function render_php_page(string $file): void {
     echo $html;
 }
 
-if (str_starts_with($path, '/__theme/')) {
+if (strpos($path, '/__theme/') === 0) {
     send_file_safe($themeRoot . '/' . substr($path, strlen('/__theme/')));
     return;
 }
