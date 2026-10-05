@@ -81,6 +81,69 @@
         </div>
       </section>
 
+      <section class="aimats-section aimats-product-proof" aria-labelledby="aimats-product-proof-title">
+        <div class="aimats-shell">
+          <div class="aimats-product-proof__intro">
+            <div>
+              <p class="aimats-kicker">PRODUCT VIEW</p>
+              <h2 id="aimats-product-proof-title">説明だけではなく、<br class="pc-only" />実際の画面で業務の流れを確認できます。</h2>
+            </div>
+            <p>
+              WADAX版で培ってきた「画面を見て理解できる」製品ページの強みを残しながら、
+              AIMATS R5では案件・人材・マッチング・進捗のつながりが伝わる構成へ整理しています。
+            </p>
+          </div>
+
+          <div class="aimats-product-stage">
+            <div class="aimats-product-stage__copy">
+              <span class="aimats-product-stage__index">01</span>
+              <p class="aimats-mini-label">MATCHING WORKSPACE</p>
+              <h3>案件と人材を同じ画面で比較し、候補の優先順位を確認。</h3>
+              <p>検索結果だけではなく、候補・適合度・営業判断につながる情報をまとめて確認できる画面イメージです。</p>
+              <ul>
+                <li>案件 → 人材 / 人材 → 案件の両方向</li>
+                <li>複数候補を並べて比較</li>
+                <li>営業判断に必要な情報を同じ流れで確認</li>
+              </ul>
+            </div>
+            <figure class="aimats-product-stage__visual">
+              <img src="images/aimats-r51/product-matching.png" alt="AIMATSのマッチング画面イメージ" />
+              <figcaption>Matching workspace / PC・Mobile</figcaption>
+            </figure>
+          </div>
+
+          <div class="aimats-product-proof__grid">
+            <article class="aimats-product-proof-card">
+              <div class="aimats-product-proof-card__body">
+                <span>02</span>
+                <p class="aimats-mini-label">DASHBOARD</p>
+                <h3>営業状況を、一覧とグラフで把握。</h3>
+                <p>案件・人材・進捗を分断せず、チームで現在地を共有しやすい構成です。</p>
+              </div>
+              <figure><img src="images/aimats-r51/product-dashboard.png" alt="AIMATSのダッシュボード画面イメージ" /></figure>
+            </article>
+
+            <article class="aimats-product-proof-card">
+              <div class="aimats-product-proof-card__body">
+                <span>03</span>
+                <p class="aimats-mini-label">PIPELINE</p>
+                <h3>候補・進捗・結果を、次の営業アクションへ。</h3>
+                <p>マッチング後の提案や進行状況まで追い、結果を改善材料として残します。</p>
+              </div>
+              <figure><img src="images/aimats-r51/product-pipeline.png" alt="AIMATSの進捗・案件管理画面イメージ" /></figure>
+            </article>
+          </div>
+
+          <div class="aimats-product-proof__note">
+            <div>
+              <strong>画面イメージを見ながら、自社業務に合うか確認できます。</strong>
+              <p>実際の表示項目・画面構成は、ご利用環境や開発状況により変更される場合があります。</p>
+            </div>
+            <a class="aimats-btn aimats-btn--primary" href="/aimats/trial">自社データで試してみる</a>
+          </div>
+        </div>
+      </section>
+
       <section class="aimats-section aimats-section--problems">
         <div class="aimats-shell">
           <div class="aimats-section-heading">
