@@ -36,13 +36,13 @@ $contact_path = $product_name === "aimats" ? "/aimats/contact" : "/newcontact/?t
                   href="https://www.air-admin8.co.jp"
                   class="header-logo__link"
                 >
-                  <h1 class="header-logo__img-wrapper">
+                  <div class="header-logo__img-wrapper">
                     <img
                       src="images/header-logo.png"
                       alt="Air Admin8"
                       class="header-logo__img"
                     />
-                  </h1>
+                  </div>
                 </a>
               </div>
               <nav class="header-nav">
