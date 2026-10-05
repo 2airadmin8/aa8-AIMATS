@@ -51,6 +51,12 @@ for name, (rel, canonical_expected) in PAGES.items():
     if len(title) != 1 or not re.sub(r"\s+", " ", title[0]).strip():
         errors.append(f"{name}: title missing or duplicated")
 
+    h1s = re.findall(r"<h1[^>]*>(.*?)</h1>", text, re.I | re.S)
+    h1_texts = [re.sub(r"<[^>]+>", " ", h) for h in h1s]
+    h1_texts = [re.sub(r"\s+", " ", h).strip() for h in h1_texts]
+    if len(h1s) != 1 or not h1_texts[0]:
+        errors.append(f"{name}: exactly one non-empty H1 required, got {len(h1s)}")
+
     descriptions = re.findall(
         r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)["\']',
         text,
